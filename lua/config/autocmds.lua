@@ -21,6 +21,22 @@ vim.api.nvim_create_autocmd("InsertCharPre", {
     end,
 })
 
+vim.api.nvim_create_augroup("DisableAutomaticComment", {
+    clear = true,
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    group = "DisableAutomaticComment",
+    pattern = "*",
+    callback = function()
+        vim.opt_local.formatoptions:remove({
+            "c",
+            "r",
+            "o",
+        })
+    end,
+})
+
 vim.cmd([[
     function! AirlineClock()
         return strftime("%H:%M")
