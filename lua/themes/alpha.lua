@@ -81,7 +81,8 @@ return {
     cCharacter = { fg = Colors.strings },
     cppCharacter = { fg = Colors.strings },
 
-    SnippetTabstopActive = {fg = "#FFC857", bg = "NONE"},
+    SnippetTabstopActive = {fg = "#FFFFFF", bg = "NONE"},
+    SnippetTabstop = {fg = "#FFFFFF", bg = "NONE"},
     LspSignatureActiveParameter = {fg = "#FFFFFF", bg = "NONE", bold = true},
     -- Editor
     SignColumn = { bg = Colors.secondary },
